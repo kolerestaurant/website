@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kole Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#order-on-whatsapp">Order on Whatsapp</a></li>
+            <li><a href="#about">About Kole</a></li>
+            <li><a href="#photos">Photo Gallery</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <header>
+            <img src="Kole Logo 2.png" alt="Kole Restaurant Logo" class="logo">
+            <p class="header-text">Experience The Best of North Indian Cuisine</p>
+        </header>
+    </section>
+
+    <section id="order-on-whatsapp" class="order-on-whatsapp">
+        <h2>Order on Whatsapp</h2>
+        <div class="dish-grid">
+            <div class="dish" data-name="Paneer Tikka Shaslik" data-price="300">
+                <img src="Paneer Tikka Shaslik 45.jpg" alt="Dish 1">
+                <p>Paneer Tikka Shaslik</p>
+                <p>Price: 300</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Malai Paneer Tikka" data-price="320">
+                <img src="Malai Paneer Tikka 45.jpg" alt="Dish 2">
+                <p>Malai Paneer Tikka</p>
+                <p>Price: 320</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Peshawari Paneer Tikka" data-price="350">
+                <img src="Peshawari Paneer Tikka 45.jpg" alt="Dish 3">
+                <p>Peshawari Paneer Tikka</p>
+                <p>Price: 350</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Hariyali Paneer Tikka" data-price="320">
+                <img src="Hariyali Paneer Tikka 45.jpg" alt="Dish 4">
+                <p>Hariyali Paneer Tikka</p>
+                <p>Price: 320</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Dahi Ke Sholey" data-price="280">
+                <img src="Dahi ke Sholey 45.jpg" alt="Dish 5">
+                <p>Dahi Ke Sholey</p>
+                <p>Price: 280</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name=" Tandoori Mushroom " data-price="220">
+                <img src="Tandoori Mushroom 45.jpg" alt="Dish 6">
+                <p>Tandoori Mushroom </p>
+                <p>Price: 320</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Stuffed Mushroom " data-price="280">
+                <img src="Stuffed Mushroom 45.jpg" alt="Dish 7">
+                <p>Stuffed Mushroom </p>
+                <p>Price: 280</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Achari Soya Chaap " data-price="250">
+                <img src="Achari Soya Chaap 45.jpg" alt="Dish 8">
+                <p>Achari Soya Chaap </p>
+                <p>Price: 250</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Malai Soya Chaap " data-price="280">
+                <img src="Malai Soya Chaap 45.jpg" alt="Dish 9">
+                <p>Malai Soya Chaap </p>
+                <p>Price: 280</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Achari Paneer Tikka" data-price="320">
+                <img src="Paneer Tikka Shaslik 45.jpg" alt="Dish 10">
+                <p>Achari Paneer Tikka</p>
+                <p>Price: 320</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Hara Bhara Kebab " data-price="240">
+                <img src="Hara Bhara Kebab 45.jpg" alt="Dish 11">
+                <p>Hara Bhara Kebab</p>
+                <p>Price: 240</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Veg Seekh Kabab " data-price="300">
+                <img src="Veg Seekh Kabab 45.jpg" alt="Dish 12">
+                <p>Veg Seekh Kabab</p>
+                <p>Price: 300</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Dahi Ke Kebab " data-price="300">
+                <img src="Dahi Ke Kebab 45.jpg" alt="Dish 13">
+                <p>Dahi Ke Kebab</p>
+                <p>Price: 300</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Veg Platter " data-price="460">
+                <img src="Veg Platter 45.jpg" alt="Dish 14">
+                <p>Veg Platter</p>
+                <p>Price:460</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Tandoori Chicken " data-price="450">
+                <img src="Tandoori Chicken 45.jpg" alt="Dish 15">
+                <p>Tandoori Chicken</p>
+                <p>Price: 450</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Lehsuni Chicken  Tikka " data-price="480">
+                <img src="Lehsuni Chicken Tikka 45.jpg" alt="Dish 16">
+                <p>Lehsuni Chicken  Tikka </p>
+                <p>Price: 480</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Tandoori Chicken Tikka" data-price="450">
+                <img src="Tandoori Chicken Tikka 45.jpg" alt="Dish 17">
+                <p>Tandoori CHicken Tikka</p>
+                <p>Price: 450</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Chicken safari Tikka " data-price="550">
+                <img src="Chicken Safari Tikka 45.jpeg" alt="Dish 18">
+                <p>Chicken Safari Tikka </p>
+                <p>Price: 550</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Chicken Kalmi" data-price="360/600">
+                <img src="Chicken Kalmi 45.jpg" alt="Dish 19 ">
+                <p>Chicken Kalmi</p>
+                <p>Price: 360/600</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Achari Tangdi " data-price="360">
+                <img src="Achari Tangdi 45.jpg" alt="Dish 20">
+                <p>Achari Tangdi </p>
+                <p>Price: 360</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Lemon Chicken  " data-price="450">
+                <img src="Lemon Chicken 45.jpg" alt="Dish 21">
+                <p>Lemon Chicken  </p>
+                <p>Price: 450</p>
+                <button onclick="addToCart(this)">Select</button>
+           
+           </div>
+           <div class="dish" data-name="Chicken Lahori Tikka  " data-price="380">
+                <img src="Chicken Lahori Tikka 45.jpg" alt="Dish 22">
+                <p>Chicken Lahori Tikka  </p>
+                <p>Price: 380</p>
+                <button onclick="addToCart(this)">Select</button>
+           </div>
+           <div class="dish" data-name="Multani Chicken Tikka " data-price="500">
+                <img src="Multani Chicken Tikka 45.jpg " alt="Dish 23">
+                <p>Multani Chicken Tikka  </p>
+                <p>Price: 500</p>
+                <button onclick="addToCart(this)">Select</button>
+           </div>
+           <div class="dish" data-name="chicken Seekh Kabab 45 " data-price="350">
+                <img src="Veg Seekh Kabab 45.jpg" alt="Dish 24">
+                <p>Chicken Seekh Kabab  </p>
+                <p>Price:350</p>
+                <button onclick="addToCart(this)">Select</button>
+           </div>
+           <div class="dish" data-name="Mutton Seekh Kebab " data-price="420">
+                <img src="Mutton Seekh Kebab 45.jpg" alt="Dish 25">
+                <p>Mutton Seekh Kebab 45 </p>
+                <p>Price: 420</p>
+                <button onclick="addToCart(this)">Select</button>
+                </div>
+           <div class="dish" data-name="Non Veg Platter " data-price="550">
+                <img src="Non Veg Platter 45.jpg" alt="Dish 26">
+                <p>Non Veg Platter  </p>
+                <p>Price: 550</p>
+                <button onclick="addToCart(this)">Select</button>
+           </div>
+           <div class="dish" data-name="Daal Makhani " data-price="340">
+                <img src=" Daal Makhani 45.jpg" alt="Dish 27">
+                <p> Daal Makhani 45</p>
+                <p>Price: 340</p>
+                <button onclick="addToCart(this)">Select</button>
+           </div>
+           <div class="dish" data-name="Dal Tadka" data-price="220">
+                <img src="Dal Tadka 45.jpg" alt="Dish 28">
+                <p> Dal Tadka </p>
+                <p>Price: 220</p>
+                <button onclick="addToCart(this)">Select</button>
+           </div>
+           <div class="dish" data-name="Shahi Paneer " data-price="280">
+                <img src="Shahi Paneer 45.jpg" alt="Dish 29">
+                <p> Shahi Paneer</p>
+                <p>Price: 280</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+           <div class="dish" data-name="Palak Paneer " data-price="260">
+                <img src="Palak Paneer 45.jpg" alt="Dish 30">
+                <p>Palak Paneer </p>
+                <p>rice: 260</p>
+                <button onclick="addToCart(this)">Select</button>
+           </div>
+           <div class="dish" data-name="Paneer Dhaniya Adraki" data-price="300">
+                <img src="Paneer Dhaniya Adraki 45.jpg" alt="Dish 31">
+                <p>Paneer Dhaniya Adraki </p>
+                <p>Price: 300</p>
+                <button onclick="addToCart(this)">Select</button>
+           </div>
+           <div class="dish" data-name="Kadhai Paneer  " data-price="270">
+                <img src="Kadhai Paneer 45.jpg" alt="Dish 32">
+                <p>Kadhai Paneer  </p>
+                <p>Price: 270</p>
+                <button onclick="addToCart(this)">Select</button>
+           </div>
+           <div class="dish" data-name="Handi Paneer " data-price="280">
+                <img src="Handi Paneer 45.jpg" alt="Dish 33">
+                <p>Handi Paneer </p>
+                <p>Price: 280</p>
+                <button onclick="addToCart(this)">Select</button>       
+          </div>
+           <div class="dish" data-name="Paneer Butter Masala " data-price="300">
+                <img src="Paneer Butter Masala 45.jpg" alt="Dish 34">
+                <p>Paneer Butter Masala </p>
+                <p>Price: 300</p>
+                <button onclick="addToCart(this)">Select</button>       
+         </div>
+           <div class="dish" data-name="Paneer Lababdaar " data-price="330">
+                <img src="Paneer Lababdaar 45.jpg" alt="Dish 35">
+                <p>Paneer Lababdaar 45  </p>
+                <p>Price: 330</p>
+                <button onclick="addToCart(this)">Select</button>       
+         </div>
+           <div class="dish" data-name="Soya Chaap Masala  " data-price="280">
+                <img src="Soya Chaap Masala 45.jpg" alt="Dish 36">
+                <p>Soya Chaap Masala</p>
+                <p>Price: 280</p>
+                <button onclick="addToCart(this)">Select</button>       
+         </div>
+           <div class="dish" data-name="Mix Veg  " data-price="300">
+                <img src="Mix Veg 45.jpg" alt="Dish 37">
+                <p>Mix Veg 45  </p>
+                <p>Price: 300</p>
+                <button onclick="addToCart(this)">Select</button>
+         </div>
+           <div class="dish" data-name="Achari Aaloo" data-price="250">
+                <img src="Achari Aaloo 45.jpg" alt="Dish 37">
+                <p>Achari Aaloo  </p>
+                <p>Price: 250</p>
+                <button onclick="addToCart(this)">Select</button>
+         </div>
+           <div class="dish" data-name="Mix Veg  " data-price="300">
+                <img src="Mix Veg 45.jpg" alt="Dish 37">
+                <p>Mix Veg 45  </p>
+                <p>Price: 300</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>
+            <div class="dish" data-name="Mix Veg  " data-price="300">
+                <img src="Mix Veg 45.jpg" alt="Dish 37">
+                <p>Mix Veg 45  </p>
+                <p>Price: 300</p>
+                <button onclick="addToCart(this)">Select</button>
+            </div>      
+ 
+ <button class="order-button" onclick="confirmOrder()">Place Order</button>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Kole</h2>
+        <p>Step into the warm embrace of Kole Restaurant...</p>
+        <p>Our story is one woven with threads of passion...</p>
+    </section>
+
+    <section id="photos" class="photos">
+        <h2>Photo Gallery</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="Chicken Lababdaar 45.jpg" style="width:100%">
+            </div>
+            <!-- Add the remaining slides here -->
+        </div>
+    </section>
+
+    <section id="videos" class="videos">
+        <h2>Videos</h2>
+        <div class="video-wrapper">
+            <div class="video-container">
+                <video controls>
+                    <source src="Butter Chicken.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video controls>
+                    <source src="Stuffed Mushroom.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Add more video elements as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Address: B-214, Supermart 1, DLF Phase 4, Gurugram 122007</p>
+        <p>Phone: +91 7042429748</p>
+        <p>Email: <a href="mailto:kolerestaurant@gmail.com">kolerestaurant@gmail.com</a></p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Kole Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+        let selectedItems = []; // Array to store selected items
+
+        function addToCart(button) {
+            const dish = button.parentNode.dataset;
+            const index = selectedItems.findIndex(item => item.name === dish.name);
+            if (index === -1) {
+                selectedItems.push({
+                    name: dish.name,
+                    price: parseFloat(dish.price)
+                });
+                button.classList.add('selected');
+                button.innerText = 'Unselect';
+            } else {
+                selectedItems.splice(index, 1);
+                button.classList.remove('selected');
+                button.innerText = 'Select';
+            }
+        }
+
+        function confirmOrder() {
+            if (selectedItems.length === 0) {
+                alert("Please select at least one item to order.");
+                return;
+            }
+
+            let total = 0;
+            let message = "Your Order:\n";
+            selectedItems.forEach(item => {
+                message += `${item.name} - ₹${item.price}\n`;
+                total += item.price;
+            });
+            message += `Total: ₹${total.toFixed(2)}`;
+
+            if (confirm(message + "\n\nDo you want to confirm your order?")) {
+                sendToWhatsApp(message);
+                // Optionally, you can reset the selected items array and remove the selected class from buttons here
+                selectedItems = [];
+                document.querySelectorAll('.dish button.selected').forEach(button => {
+                    button.classList.remove('selected');
+                    button.innerText = 'Select';
+                });
+            }
+        }
+
+        function sendToWhatsApp(message) {
+            // Use JavaScript to open WhatsApp with the pre-filled message
+            // Replace the number with your WhatsApp business number
+            // Make sure to add the international dialing code (+91 for India)
+            window.open(`https://wa.me/917042429748?text=${encodeURIComponent(message)}`);
+        }
+    </script>
+</body>
+</html>
