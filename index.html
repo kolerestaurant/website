@@ -12,8 +12,6 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#order-on-whatsapp">Order on Whatsapp</a></li>
             <li><a href="#about">About Kole</a></li>
-            <li><a href="#photos">Photo Gallery</a></li>
-            <li><a href="#videos">Videos</a></li>
             <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
@@ -275,36 +273,30 @@
 
     <section id="about" class="about">
         <h2>About Kole</h2>
-        <p>Step into the warm embrace of Kole Restaurant...</p>
-        <p>Our story is one woven with threads of passion...</p>
+        <p>
+            Step into the warm embrace of Kole Restaurant and embark on a journey that transcends mere dining; it's an odyssey through the heart and soul of North Indian cuisine. Nestled in the bustling streets of Gurugram, Kole stands as a beacon of tradition and taste, beckoning food enthusiasts from far and wide.
+        </p>
+        <p>
+            Our story is one woven with threads of passion, authenticity, and a deep-rooted love for culinary artistry. Born from a dream to recreate the flavors of home, Kole brings to life the essence of North Indian kitchens, where recipes are more than just ingredients—they're a legacy passed down through generations.
+        </p>
+        <p>
+            At the heart of Kole lies a team of dedicated chefs, artisans of flavor who wield spices like brushes on a canvas, crafting masterpieces that dance on the palate. Each dish is a symphony of aromas, textures, and tastes, carefully curated to evoke memories of home-cooked meals shared with loved ones.
+        </p>
+        <p>
+            From the fiery embrace of tandoori kebabs to the comforting embrace of creamy curries, every bite at Kole is a journey through time and tradition. Our menu pays homage to the rich tapestry of Indian cuisine, celebrating the diversity of flavors that make it truly unique.
+        </p>
+        <p>
+            But Kole is more than just a restaurant—it's a sanctuary for those seeking solace in the familiar embrace of food. Whether you're seeking a quiet evening with family, a lively gathering with friends, or a moment of solitude amidst the chaos of everyday life, Kole welcomes you with open arms.
+        </p>
+        <p>
+            Join us at our humble abode, nestled in the heart of Gurugram, and rediscover the magic of North Indian cuisine. Let our flavors transport you to a time when meals were more than just sustenance; they were moments of joy, laughter, and love.
+        </p>
+        <p class="about-quote">
+            At Kole, we don't just serve food; we serve memories. Come, make yours with us.
+        </p>
     </section>
 
-    <section id="photos" class="photos">
-        <h2>Photo Gallery</h2>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="Chicken Lababdaar 45.jpg" style="width:100%">
-            </div>
-            <!-- Add the remaining slides here -->
-        </div>
-    </section>
-
-    <section id="videos" class="videos">
-        <h2>Videos</h2>
-        <div class="video-wrapper">
-            <div class="video-container">
-                <video controls>
-                    <source src="Butter Chicken.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <video controls>
-                    <source src="Stuffed Mushroom.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <!-- Add more video elements as needed -->
-            </div>
-        </div>
-    </section>
+    
 
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
@@ -318,23 +310,7 @@
     </footer>
 
     <script>
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 2000); // Change image every 2 seconds
-        }
-
+        
         let selectedItems = []; // Array to store selected items
 
         function addToCart(button) {
