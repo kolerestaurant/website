@@ -113,5 +113,5 @@ function sendToWhatsApp(message) {
     // Use JavaScript to open WhatsApp with the pre-filled message
     // Replace the number with your WhatsApp business number
     // Make sure to add the international dialing code (+91 for India)
-    window.open(`https://wa.me/918377021800?text=${encodeURIComponent(message)}`);
+    window.open(`https://wa.me/917042429748?text=${encodeURIComponent(message)}`);
 }
