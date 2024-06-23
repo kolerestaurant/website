@@ -339,6 +339,7 @@ button:hover {
     border-radius: 10px;
     cursor: pointer;
     text-transform: uppercase;
+    width: 100%;
 }
 
 .order-button:hover {
@@ -357,3 +358,49 @@ button:hover {
         font-size: 1.2em;
     }
 }
+
+.dish button {
+    display: inline-block;
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dish button.selected {
+    background-color: goldenrod;
+}
+
+.dish .quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.dish .quantity-controls button {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dish .quantity-controls button:hover {
+    background-color: goldenrod;
+}
+
+.dish .quantity-controls span {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+
