@@ -25,7 +25,7 @@
     <section id="order-on-whatsapp" class="order-on-whatsapp">
         <h2>Order on Whatsapp</h2>
         <div class="dish-grid">
-            <div class="dish" data-name="Paneer Tikka Shaslik">
+            <div class="dish" data-name="Paneer Tikka Shaslik" data-price="320">
                 <img src="Paneer Tikka Shaslik 45.jpg" alt="Dish 1">
                 <p>Paneer Tikka Shaslik</p>
                 <button onclick="selectItem(this, 'full', 300)">Select</button>
@@ -50,7 +50,7 @@
                 <div class="quantity-controls full"></div>
             </div>
             <div class="dish" data-name="Dahi Ke Sholey" data-price="280">
-                <img src="DahiKeSholey45.jpg" alt="Dish 5">
+                <img src="Dahi Ke Sholey 45.jpg" alt="Dish 5">
                 <p>Dahi Ke Sholey</p>
                 <p>Price: 280</p>
                 <button onclick="selectItem(this, 'full', 300)">Select</button>
@@ -110,7 +110,7 @@
                 <p>Dahi Ke Kebab</p>
                 <p>Price: 300</p>
                 <button onclick="selectItem(this, 'full', 300)">Select</button>
-                <div class="quantity-controls full"></div>
+                       <div class="quantity-controls full"></div>
             </div>
             <div class="dish" data-name="Veg Platter " data-price="460">
                 <img src="Veg Platter 45.jpg" alt="Dish 14">
@@ -122,8 +122,9 @@
             <div class="dish" data-name="Tandoori Chicken " data-price="450">
                 <img src="Tandoori Chicken 45.jpg" alt="Dish 15">
                 <p>Tandoori Chicken</p>
-                <p>Price: 450</p>
-                <button onclick="selectItem(this, 'full', 300)">Select</button>
+                <button onclick="selectItem(this, 'half', 300)">Select Half (₹300)</button>
+                <div class="quantity-controls half"></div>
+                <button onclick="selectItem(this, 'full', 450)">Select Full (₹450)</button>
                 <div class="quantity-controls full"></div>
             </div>
             <div class="dish" data-name="Lehsuni Chicken  Tikka " data-price="480">
@@ -133,6 +134,13 @@
                 <button onclick="selectItem(this, 'full', 300)">Select</button>
                 <div class="quantity-controls full"></div>
             </div>
+            <div class="dish" data-name="Multani Chicken Tikka " data-price="500">
+                <img src="Multani Chicken Tikka 45.jpg " alt="Dish 23">
+                <p>Multani Chicken Tikka  </p>
+                <p>Price: 500</p>
+                <button onclick="selectItem(this, 'full', 300)">Select</button>
+                <div class="quantity-controls full"></div>
+           </div>
             <div class="dish" data-name="Tandoori Chicken Tikka" data-price="450">
                 <img src="Tandoori Chicken Tikka 45.jpg" alt="Dish 17">
                 <p>Tandoori Chicken Tikka</p>
@@ -147,11 +155,12 @@
                 <button onclick="selectItem(this, 'full', 300)">Select</button>
                 <div class="quantity-controls full"></div>
             </div>
-            <div class="dish" data-name="Chicken Kalmi" data-price="360/600">
-                <img src="Chicken Kalmi 45.jpg" alt="Dish 19 ">
-                <p>Chicken Kalmi</p>
-                <p>Price: 360/600</p>
-                <button onclick="selectItem(this, 'full', 300)">Select</button>
+            <div class="dish" data-name="Kalmi Chicken Tikka" data-price="300">
+                <img src="Chicken Kalmi 45.jpg" alt="Dish 37">
+                <p>Kalmi Chicken Tikka</p>
+                <button onclick="selectItem(this, 'half', 360)">Select Half (₹360)</button>
+                <div class="quantity-controls half"></div>
+                <button onclick="selectItem(this, 'full', 600)">Select Full (₹600)</button>
                 <div class="quantity-controls full"></div>
             </div>
             <div class="dish" data-name="Achari Tangdi " data-price="360">
@@ -167,7 +176,6 @@
                 <p>Price: 450</p>
                 <button onclick="selectItem(this, 'full', 300)">Select</button>
                 <div class="quantity-controls full"></div>
-           
            </div>
            <div class="dish" data-name="Chicken Lahori Tikka" data-price="380">
                 <img src="Chicken Lahori Tikka 45.jpg" alt="Dish 22">
@@ -176,13 +184,7 @@
                 <button onclick="selectItem(this, 'full', 300)">Select</button>
                 <div class="quantity-controls full"></div>
            </div>
-           <div class="dish" data-name="Multani Chicken Tikka " data-price="500">
-                <img src="Multani Chicken Tikka 45.jpg " alt="Dish 23">
-                <p>Multani Chicken Tikka  </p>
-                <p>Price: 500</p>
-                <button onclick="selectItem(this, 'full', 300)">Select</button>
-                <div class="quantity-controls full"></div>
-           </div>
+           
            <div class="dish" data-name="Chicken Seekh Kebab 45 " data-price="350">
                 <img src="Veg Seekh Kabab 45.jpg" alt="Dish 24">
                 <p>Chicken Seekh Kabab  </p>
@@ -246,13 +248,7 @@
                 <button onclick="selectItem(this, 'full', 300)">Select</button>
                 <div class="quantity-controls full"></div>
            </div>
-           <div class="dish" data-name="Handi Paneer" data-price="280">
-                <img src="Handi Paneer 45.jpg" alt="Dish 33">
-                <p>Handi Paneer </p>
-                <p>Price: 280</p>
-                <button onclick="selectItem(this, 'full', 300)">Select</button>
-                <div class="quantity-controls full"></div>
-          </div>
+           
            <div class="dish" data-name="Paneer Butter Masala" data-price="300">
                 <img src="Paneer Butter Masala 45.jpg" alt="Dish 34">
                 <p>Paneer Butter Masala </p>
@@ -267,6 +263,13 @@
                 <button onclick="selectItem(this, 'full', 300)">Select</button>
                 <div class="quantity-controls full"></div>      
          </div>
+         <div class="dish" data-name="Handi Paneer" data-price="280">
+                <img src="Kadhai Paneer 45.jpg" alt="Dish 33">
+                <p>Handi Paneer </p>
+                <p>Price: 280</p>
+                <button onclick="selectItem(this, 'full', 300)">Select</button>
+                <div class="quantity-controls full"></div>
+          </div>
            <div class="dish" data-name="Soya Chaap Masala" data-price="280">
                 <img src="Soya Chaap Masala 45.jpg" alt="Dish 36">
                 <p>Soya Chaap Masala</p>
@@ -304,24 +307,233 @@
                 <button onclick="selectItem(this, 'full', 690)">Select Full (₹690)</button>
                 <div class="quantity-controls full"></div>
             </div>
-            <div class="dish" data-name="Chicken Rara" data-price="300">
-                <img src="Chicken Homemade Curry 45.jpg" alt="Dish 37">
+            <div class="dish" data-name="Chicken Homemade Curry" data-price="300">
+                <img src="Chicken Homemade Curry 45.jpeg" alt="Dish 37">
                 <p>Chicken Homemade Curry</p>
                 <button onclick="selectItem(this, 'half', 380)">Select Half (₹380)</button>
                 <div class="quantity-controls half"></div>
                 <button onclick="selectItem(this, 'full', 600)">Select Full (₹600)</button>
                 <div class="quantity-controls full"></div>
             </div>
-            <div class="dish" data-name="Chicken Rara" data-price="300">
+            <div class="dish" data-name="Kadai Chicken" data-price="300">
                 <img src="Kadhai Chicken 45.jpg" alt="Dish 37">
                 <p>Kadai Chicken</p>
-                <button onclick="selectItem(this, 'half', 380)">Select Half (₹425)</button>
+                <button onclick="selectItem(this, 'half', 425)">Select Half (₹425)</button>
                 <div class="quantity-controls half"></div>
-                <button onclick="selectItem(this, 'full', 600)">Select Full (₹680)</button>
+                <button onclick="selectItem(this, 'full', 680)">Select Full (₹680)</button>
                 <div class="quantity-controls full"></div>
             </div>
-                 
- 
+            <div class="dish" data-name="Chicken do Pyaza" data-price="300">
+                <img src="Chicken do Pyaza 45.jpg" alt="Dish 37">
+                <p>Chicken do Pyaza</p>
+                <button onclick="selectItem(this, 'half', 425)">Select Half (₹425)</button>
+                <div class="quantity-controls half"></div>
+                <button onclick="selectItem(this, 'full', 680)">Select Full (₹680)</button>
+                <div class="quantity-controls full"></div>
+            </div>
+            <div class="dish" data-name="Chicken Tikka Butter Masala data"-price="300">
+                <img src="Chicken Butter Masala 45.jpg" alt="Dish 37">
+                <p>Chicken Tikka Butter Masala</p>
+                <button onclick="selectItem(this, 'half', 425)">Select Half (₹425)</button>
+                <div class="quantity-controls half"></div>
+                <button onclick="selectItem(this, 'full', 710)">Select Full (₹710)</button>
+                <div class="quantity-controls full"></div>
+            </div>
+            <div class="dish" data-name="Handi Chicken data"-price="300">
+                <img src="Handi Chicken 45.jpg" alt="Dish 37">
+                <p>Handi Chicken </p>
+                <button onclick="selectItem(this, 'half', 425)">Select Half (₹425)</button>
+                <div class="quantity-controls half"></div>
+                <button onclick="selectItem(this, 'full', 710)">Select Full (₹710)</button>
+                <div class="quantity-controls full"></div>
+             </div>
+            <div class="dish" data-name=Chicken Saag wala" -price="300">
+                <img src="Chicken Saag wala 45.jpg" alt="Dish 37">
+                <p>Chicken Saag wala </p>
+                <button onclick="selectItem(this, 'half', 380)">Select Half (₹425)</button>
+                <div class="quantity-controls half"></div>
+                <button onclick="selectItem(this, 'full', 680)">Select Full (₹710)</button>
+                <div class="quantity-controls full"></div>        
+              </div>
+            <div class="dish" data-name=Chicken Lababdaar" -price="300">
+                <img src="Chicken Lababdaar 45.jpg" alt="Dish 37">
+                <p>Chicken Lababdaar </p>
+                <button onclick="selectItem(this, 'half', 410)">Select Half (₹425)</button>
+                <div class="quantity-controls half"></div>
+                <button onclick="selectItem(this, 'full', 690)">Select Full (₹690)</button>
+                <div class="quantity-controls full"></div>    
+             </div>
+            <div class="dish" data-name=Mutton Curry" -price="300">
+                <img src="Mutton Curry 45.jpg" alt="Dish 37">
+                <p>Mutton Curry </p>
+                <button onclick="selectItem(this, 'half', 325)">Select Half (₹425)</button>
+                <div class="quantity-controls half"></div>
+                <button onclick="selectItem(this, 'full', 560)">Select Full (₹690)</button>
+                <div class="quantity-controls full"></div>    
+            </div>
+            <div class="dish" data-name=Mutton Rara" -price="300">
+                <img src="Mutton Rara.jpg" alt="Dish 37">
+                <p>Mutton Rara </p>
+                <button onclick="selectItem(this, 'half', 325)">Select Half (₹325)</button>
+                <div class="quantity-controls half"></div>
+                <button onclick="selectItem(this, 'full', 560)">Select Full (₹560)</button>
+                <div class="quantity-controls full"></div>   
+            </div>
+            <div class="dish" data-name=Mutton Rogan Josh" -price="300">
+                <img src="Mutton Rogan Josh 45.jpg" alt="Dish 37">
+                <p>Mutton Rogan Josh </p>
+                <button onclick="selectItem(this, 'half', 325)">Select Half (₹325)</button>
+                <div class="quantity-controls half"></div>
+                <button onclick="selectItem(this, 'full', 560)">Select Full (₹560)</button>
+                <div class="quantity-controls full"></div>    
+            </div>
+            <div class="dish" data-name=Mutton Saag Wala" -price="300">
+                <img src="Mutton Saag Wala.jpg" alt="Dish 37">
+                <p>Mutton Saag Wala </p>
+                <button onclick="selectItem(this, 'half', 300)">Select Half (₹520)</button>
+                <div class="quantity-controls half"></div>
+                <button onclick="selectItem(this, 'full', 520)">Select Full (₹520)</button>
+                <div class="quantity-controls full"></div>
+             </div>
+            <div class="dish" data-name="Steam Rice " data-price="180">
+                <img src="Steam Rice.jpg" alt="Dish 4">
+                <p>Steam Rice</p>
+                <button onclick="selectItem(this, 'full', 180)">Select</button>
+                <div class="quantity-controls full"></div>           
+             </div>
+            <div class="dish" data-name="Jeera Rice " data-price="220">
+                <img src="Jeera Rice 45.jpg" alt="Dish 4">
+                <p>Jeera Rice</p>
+                <button onclick="selectItem(this, 'full', 220)">Select</button>
+                <div class="quantity-controls full"></div>           
+            </div>
+            <div class="dish" data-name=" Peas Pulao " data-price="230">
+                <img src="Peas Pulow.jpg" alt="Dish 4">
+                <p>Peas Pulao</p>
+                <button onclick="selectItem(this, 'full', 230)">Select</button>
+                <div class="quantity-controls full"></div>           
+            </div>
+            <div class="dish" data-name=" Veg Pulao " data-price="280">
+                <img src="Veg Pulow 45.jpeg" alt="Dish 4">
+                <p>Peas Pulao</p>
+                <button onclick="selectItem(this, 'full', 280)">Select</button>
+                <div class="quantity-controls full"></div>           
+            </div>
+            <div class="dish" data-name=" Veg Thali " data-price="380">
+                <img src="Veg Thali 45.jpg" alt="Dish 4">
+                <p>Veg Thali </p>
+                <button onclick="selectItem(this, 'full', 380)">Select</button>
+                <div class="quantity-controls full"></div>           
+             </div>
+            <div class="dish" data-name=" Non Veg Thali " data-price="480">
+                <img src="Non Veg Thali 45.jpg" alt="Dish 4">
+                <p>Non Veg Thali</p>
+               <button onclick="selectItem(this, 'full', 480)">Select</button>
+                <div class="quantity-controls full"></div>           
+             </div>
+            <div class="dish" data-name=" Roti pe Boti " data-price="320">
+                <img src="Roti pe Boti 45.jpg" alt="Dish 4">
+                <p>Roti pe Boti</p>
+                <button onclick="selectItem(this, 'full', 320)">Select</button>
+                <div class="quantity-controls full"></div>           
+            </div>
+            <div class="dish" data-name=" Missi Roti " data-price="55">
+                <img src="Missi Roti.jpg" alt="Dish 4">
+                <p>Missi Roti</p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div>           
+            </div>
+            <div class="dish" data-name=" Tandoori Roti " data-price="25">
+                <img src="Tandoori Roti.jpg" alt="Dish 4">
+                <p>Tandoori Roti</p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div>  
+            </div>
+            <div class="dish" data-name=" Tandoori Butter Roti " data-price="35">
+                <img src="Tandoori Butter Roti.jpg" alt="Dish 4">
+                <p>Tandoori Butter  Roti</p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div> 
+            </div>
+            <div class="dish" data-name=" Butter  Naan " data-price="55">
+                <img src="Butter Naan.jpg" alt="Dish 4">
+                <p>Butter Naan </p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div>            
+            </div>
+            <div class="dish" data-name=" Garlic  Naan " data-price="65">
+                <img src="Garlic Naan.jpg" alt="Dish 4">
+                <p>Garlic Naan </p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div>            
+            </div>
+            <div class="dish" data-name=" Lachha Parantha " data-price="55">
+                <img src="Lachha Parantha.jpeg" alt="Dish 4">
+                <p>Lachha Parantha  </p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div>   
+                </div>
+            <div class="dish" data-name=" Cheese Naan " data-price="90">
+                <img src="Cheese Naan 45.jpeg" alt="Dish 4">
+                <p>Cheese Naan </p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div>    
+             </div>
+            <div class="dish" data-name=" Chicken Keema Naan " data-price="120">
+                <img src="Chicken Keema Naan 45.jpg" alt="Dish 4">
+                <p>Chicken Keema Naan </p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div>  
+           </div>
+            <div class="dish" data-name=" Mixed Bread Basket " data-price="330">
+                <img src="Mix Bread Basket.jpg" alt="Dish 4">
+                <p>Mixed Bread Basket </p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div>    
+             </div>
+            <div class="dish" data-name=" Mixed Veg Raita" data-price="110">
+                <img src="Mix Veg Raita 45.jpg" alt="Dish 4">
+                <p>Mix Veg Raita </p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div>    
+           </div>
+            <div class="dish" data-name=" Boondi Raita " data-price="110">
+                <img src="Boondi Raita 45.jpeg" alt="Dish 4">
+                <p>Boondi Raita </p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div>
+            </div>
+            <div class="dish" data-name=" Kachumber Salad " data-price="110">
+                <img src="Kachumber Salad 45.jpg" alt="Dish 4">
+                <p>Kachumber Salad </p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div>
+            </div>
+            <div class="dish" data-name=" Hara Bhara Salad " data-price="120">
+                <img src="Hara Bhara salad 45.jpeg" alt="Dish 4">
+                <p>Hara Bhara Salad </p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div>
+             </div>
+            <div class="dish" data-name=" Pineapple Raita " data-price="110">
+                <img src="Pineapple Raita 45.jpg" alt="Dish 4">
+                <p>Pineapple </p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div>
+              </div>
+            <div class="dish" data-name=" Boiled Chicken with Steam Rice " data-price="220">
+                <img src="Boiled Chicken with Steam Rice" alt="Dish 4">
+                <p>Boiled Chicken with Steam Rice</p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div>
+              </div>
+            <div class="dish" data-name=" Boiled Eggs veggies rice  " data-price="180">
+                <img src="Boiled Eggs veggies rice " alt="Dish 4">
+                <p>Boiled Eggs veggies rice  </p>
+                <button onclick=>Select</button>
+                <div class="quantity-controls full"></div>
+                    
+
  <button class="order-button" onclick="confirmOrder()">Place Order</button>
     </section>
 
