@@ -96,11 +96,12 @@
 /* Responsive design for mobile devices */
 @media (max-width: 600px) {
     #floatingmenu {
-        right: -120px; /* hide the menu a bit less on mobile */
+        right: -140px; /* hide the menu a bit less on mobile */
         width: 120px; /* reduce the width of the menu */
     }
 
     #floatingmenu .label {
+        height: 25%;
         left: -50px; /* adjust the label position for mobile */
         width: 50px; /* reduce the width of the label */
     }
@@ -127,7 +128,12 @@
 
     // Function to hide the menu
     const hideMenu = () => {
-        menu.style.right = '-160px';
+        // Adjust hiding position based on screen size
+        if (window.innerWidth > 600) {
+            menu.style.right = '-170px'; // for web
+        } else {
+            menu.style.right = '-140px'; // for mobile
+        }
     };
 
     // Add 'active' class to the selected menu item
