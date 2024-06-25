@@ -24,6 +24,8 @@
 
     <section id="order-on-whatsapp" class="order-on-whatsapp">
         <h2>Order on Whatsapp</h2>
+
+        <h2>Veg Starters</h2>
         <div class="dish-grid">
             <div class="dish" data-name="Paneer Tikka Shaslik" data-price="320">
                 <img src="Paneer Tikka Shaslik 45.jpg" alt="Dish 1">
@@ -119,6 +121,9 @@
                 <button onclick="selectItem(this, 'full', 300)">Select</button>
                 <div class="quantity-controls full"></div>
             </div>
+
+            <h2>Non Veg Starters</h2>
+
             <div class="dish" data-name="Tandoori Chicken " data-price="450">
                 <img src="Tandoori Chicken 45.jpg" alt="Dish 15">
                 <p>Tandoori Chicken</p>
@@ -504,7 +509,7 @@
                 <button onclick="selectItem(this, 'full', 110)">Select</button>
                 <div class="quantity-controls full"></div>
             </div>
-            <div class="dish" data-name=" Kachumber Salad " data-price="110">
+            <div class="dish" data-name="Kachumber Salad " data-price="110">
                 <img src="Kachumber Salad 45.jpg" alt="Dish 4">
                 <p>Kachumber Salad </p>
                 <button onclick="selectItem(this, 'full', 110)">Select</button>
@@ -542,58 +547,6 @@
 
     <script src="script.js"></script>
 
-    <script>
-
-        let selectedItems = []; // Array to store selected items
-
-        function addToCart(button) {
-            const dish = button.parentNode.dataset;
-            const index = selectedItems.findIndex(item => item.name === dish.name);
-            if (index === -1) {
-                selectedItems.push({
-                    name: dish.name,
-                    price: parseFloat(dish.price)
-                });
-                button.classList.add('selected');
-                button.innerText = 'Unselect';
-            } else {
-                selectedItems.splice(index, 1);
-                button.classList.remove('selected');
-                button.innerText = 'Select';
-            }
-        }
-
-        function confirmOrder() {
-            if (selectedItems.length === 0) {
-                alert("Please select at least one item to order.");
-                return;
-            }
-
-            let total = 0;
-            let message = "Your Order:\n";
-            selectedItems.forEach(item => {
-                message += `${item.name} - ₹${item.price}\n`;
-                total += item.price;
-            });
-            message += `Total: ₹${total.toFixed(2)}`;
-
-            if (confirm(message + "\n\nDo you want to confirm your order?")) {
-                sendToWhatsApp(message);
-                // Optionally, you can reset the selected items array and remove the selected class from buttons here
-                selectedItems = [];
-                document.querySelectorAll('.dish button.selected').forEach(button => {
-                    button.classList.remove('selected');
-                    button.innerText = 'Select';
-                });
-            }
-        }
-
-        function sendToWhatsApp(message) {
-            // Use JavaScript to open WhatsApp with the pre-filled message
-            // Replace the number with your WhatsApp business number
-            // Make sure to add the international dialing code (+91 for India)
-            window.open(`https://wa.me/917042429748?text=${encodeURIComponent(message)}`);
-        }
-    </script>
+    
 </body>
 </html>
