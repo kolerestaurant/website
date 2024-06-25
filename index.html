@@ -41,67 +41,57 @@
         }
 
         /* Styling for the floating menu */
-        #floatingmenu {
-            position: fixed;
-            top: 50%;
-            right: -170px; /* initially hide the menu */
-            width: 150px;
-            background-color: #000; /* black background */
-            border: 1px solid #ccc;
-            padding: 10px;
-            transition: right 0.3s;
-            transform: translateY(-50%);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
+#floatingmenu {
+    position: fixed;
+    top: 50%;
+    right: -170px; /* initially hide the menu */
+    width: 150px;
+    background-color: #000; /* black background */
+    border: 1px solid #ccc;
+    padding: 10px;
+    transition: right 0.3s;
+    transform: translateY(-50%);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 
-        /* When hovering over the menu, show it */
-        #floatingmenu:hover {
-            right: 0;
-        }
+/* Styling for the menu label */
+#floatingmenu .label {
+    position: absolute;
+    top: 0;
+    left: -60px; /* position the label outside of the hidden menu */
+    width: 60px;
+    height: 100%;
+    background-color: #DAA520; /* golden background */
+    color: #000; /* black font */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl; /* rotate the text */
+    transform: rotate(180deg); /* flip the rotated text */
+    cursor: pointer;
+}
 
+/* Styling for the links in the menu */
+#floatingmenu a {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #fff; /* white font */
+    padding: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-        /* Styling for the menu label */
-        #floatingmenu .label {
-            position: absolute;
-            top: 0;
-            left: -60px; /* position the label outside of the hidden menu */
-            width: 60px;
-            height: 100%;
-            background-color: #DAA520; /* golden background */
-            color: #000; /* black font */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            writing-mode: vertical-rl; /* rotate the text */
-            transform: rotate(180deg); /* flip the rotated text */
-            cursor: pointer;
-        }
+/* Hover effect for links */
+#floatingmenu a:hover {
+    background-color: #DAA520; /* golden background */
+    color: #000; /* black text */
+}
 
-
-
-
-        /* Styling for the links in the menu */
-        #floatingmenu a {
-            display: block;
-            margin-bottom: 5px;
-            text-decoration: none;
-            color: #fff; /* white font */
-            padding: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* Hover effect for links */
-        #floatingmenu a:hover {
-            background-color: #DAA520; /* golden background */
-            color: #000; /* black text */
-        }
-
-        /* Style for the active (selected) link */
-        #floatingmenu a.active {
-            background-color: #DAA520; /* golden background */
-            color: #000; /* black text */
-        }
-
+/* Style for the active (selected) link */
+#floatingmenu a.active {
+    background-color: #DAA520; /* golden background */
+    color: #000; /* black text */
+}
 
 /* Responsive design for mobile devices */
 @media (max-width: 600px) {
@@ -125,29 +115,53 @@
 
 
     <script>
-        // JavaScript to add 'active' class to the selected menu item
         document.addEventListener('DOMContentLoaded', () => {
-            const links = document.querySelectorAll('#floatingmenu a');
-            links.forEach(link => {
-                link.addEventListener('click', () => {
-                    links.forEach(l => l.classList.remove('active'));
-                    link.classList.add('active');
-                });
-            });
+    const links = document.querySelectorAll('#floatingmenu a');
+    const menu = document.getElementById('floatingmenu');
+    const label = document.querySelector('#floatingmenu .label');
 
-            // Show menu when the label is clicked
-            const label = document.querySelector('#floatingmenu .label');
-            label.addEventListener('click', () => {
-                document.getElementById('menu').style.right = '0';
-            });
+    // Function to show the menu
+    const showMenu = () => {
+        menu.style.right = '0';
+    };
 
-            // Hide menu when clicking outside of it
-            document.addEventListener('click', (e) => {
-                if (!document.getElementById('floatingmenu').contains(e.target) && e.target !== label) {
-                    document.getElementById('floatingmenu').style.right = '-150px';
-                }
-            });
+    // Function to hide the menu
+    const hideMenu = () => {
+        menu.style.right = '-160px';
+    };
+
+    // Add 'active' class to the selected menu item
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
         });
+    });
+
+    // Toggle menu visibility on label click
+    label.addEventListener('click', (e) => {
+        if (menu.style.right === '0px') {
+            hideMenu();
+        } else {
+            showMenu();
+        }
+        e.stopPropagation();
+    });
+
+    // Hide menu when clicking outside of it
+    document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && e.target !== label) {
+            hideMenu();
+        }
+    });
+
+    // Ensure menu hides when tapping outside on mobile
+    document.addEventListener('touchstart', (e) => {
+        if (!menu.contains(e.target) && e.target !== label) {
+            hideMenu();
+        }
+    });
+});
     </script>
 
 
