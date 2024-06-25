@@ -22,10 +22,123 @@
         </header>
     </section>
 
-    <section id="order-on-whatsapp" class="order-on-whatsapp">
-        <h2>Order on Whatsapp</h2>
 
-        <h2>Veg Starters</h2>
+    <!-- Floating Menu -->
+    <div id="floatingmenu">
+        <div class="label">Menu</div>   
+        <a href="#section1">Veg Starters</a>
+        <a href="#section2">Non Veg Starters</a>
+        <a href="#section3">Veg Curries</a>
+        <a href="#section4">Non Veg Curries</a>
+        <a href="#section5">Rice, Rotis & Thalis</a>
+        <a href="#section6">Raitas and Salads</a>
+    </div>
+
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Styling for the floating menu */
+        #floatingmenu {
+            position: fixed;
+            top: 50%;
+            right: -170px; /* initially hide the menu */
+            width: 150px;
+            background-color: #000; /* black background */
+            border: 1px solid #ccc;
+            padding: 10px;
+            transition: right 0.3s;
+            transform: translateY(-50%);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* When hovering over the menu, show it */
+        #floatingmenu:hover {
+            right: 0;
+        }
+
+
+        /* Styling for the menu label */
+        #floatingmenu .label {
+            position: absolute;
+            top: 0;
+            left: -60px; /* position the label outside of the hidden menu */
+            width: 60px;
+            height: 100%;
+            background-color: #DAA520; /* golden background */
+            color: #000; /* black font */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            writing-mode: vertical-rl; /* rotate the text */
+            transform: rotate(180deg); /* flip the rotated text */
+            cursor: pointer;
+        }
+
+
+
+
+        /* Styling for the links in the menu */
+        #floatingmenu a {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #fff; /* white font */
+            padding: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Hover effect for links */
+        #floatingmenu a:hover {
+            background-color: #DAA520; /* golden background */
+            color: #000; /* black text */
+        }
+
+        /* Style for the active (selected) link */
+        #floatingmenu a.active {
+            background-color: #DAA520; /* golden background */
+            color: #000; /* black text */
+        }
+    </style>
+
+
+    <script>
+        // JavaScript to add 'active' class to the selected menu item
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('#floatingmenu a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    links.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                });
+            });
+
+            // Show menu when the label is clicked
+            const label = document.querySelector('#floatingmenu .label');
+            label.addEventListener('click', () => {
+                document.getElementById('menu').style.right = '0';
+            });
+
+            // Hide menu when clicking outside of it
+            document.addEventListener('click', (e) => {
+                if (!document.getElementById('floatingmenu').contains(e.target) && e.target !== label) {
+                    document.getElementById('floatingmenu').style.right = '-150px';
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+    <section id="order-on-whatsapp" class="order-on-whatsapp">
+
+        <h2 id="section1">Veg Starters</h2>
         <div class="dish-grid">
             <div class="dish" data-name="Paneer Tikka Shaslik" data-price="320">
                 <img src="Paneer Tikka Shaslik 45.jpg" alt="Dish 1">
@@ -122,7 +235,16 @@
                 <div class="quantity-controls full"></div>
             </div>
 
-            <h2>Non Veg Starters</h2>
+        </div>
+
+        <h2 id="section2">Non Veg Starters</h2>
+
+            <div class="dish-grid">
+
+
+                
+
+
 
             <div class="dish" data-name="Tandoori Chicken " data-price="450">
                 <img src="Tandoori Chicken 45.jpg" alt="Dish 15">
@@ -211,6 +333,19 @@
                 <button onclick="selectItem(this, 'full', 300)">Select</button>
                 <div class="quantity-controls full"></div>
            </div>
+
+        </div>
+
+        <h2 id="section3">Veg Curries</h2>
+
+
+            <div class="dish-grid">
+
+
+                
+
+
+
            <div class="dish" data-name="Dal Makhani " data-price="340">
                 <img src=" Daal Makhani 45.jpg" alt="Dish 27">
                 <p> Dal Makhani 45</p>
@@ -297,6 +432,16 @@
                 <button onclick="selectItem(this, 'full', 300)">Select</button>
                 <div class="quantity-controls full"></div>
          </div>
+
+         </div>
+
+        <h2 id="section4">Non Veg Curries</h2>
+
+
+            <div class="dish-grid">
+
+
+
             <div class="dish" data-name="Butter Chicken" data-price="300">
                 <img src="Butter Chicken 45.jpg" alt="Dish 37">
                 <p>Butter Chicken</p>
@@ -401,6 +546,18 @@
                 <button onclick="selectItem(this, 'full', 520)">Select Full (₹520)</button>
                 <div class="quantity-controls full"></div>
              </div>
+
+
+             </div>
+
+        <h2 id="section5">Rice, Breads & Thalis</h2>
+
+
+            <div class="dish-grid">
+
+
+
+
             <div class="dish" data-name="Steam Rice " data-price="180">
                 <img src="Steam Rice.jpg" alt="Dish 4">
                 <p>Steam Rice</p>
@@ -497,6 +654,14 @@
                <button onclick="selectItem(this, 'full', 330)">Select</button>
                 <div class="quantity-controls full"></div>    
              </div>
+
+
+        </div>
+
+        <h2 id="section6">Raitas and Salads</h2>
+
+
+            <div class="dish-grid">     
             <div class="dish" data-name=" Mixed Veg Raita" data-price="110">
                 <img src="Mix Veg Raita 45.jpg" alt="Dish 4">
                 <p>Mix Veg Raita </p>
