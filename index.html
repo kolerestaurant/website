@@ -32,7 +32,7 @@
         <a href="#section4">Non Veg Curries</a>
         <a href="#section5">Rice, Rotis & Thalis</a>
         <a href="#section6">Raitas and Salads</a>
-        <a href="#section7">Click Here After Selecting All Items</a>
+        <a href="#section7" class="last-item">Click Here After Selecting All Items</a>
     </div>
 
 
@@ -94,6 +94,15 @@
     color: #000; /* black text */
 }
 
+
+/* Styling for the "Click Here After Selecting All Items" link */
+#floatingmenu a.last-item {
+    background-color: #FF0000; /* red background */
+    color: #fff; /* white text */
+    padding: 10px; /* adjust padding as needed */
+    text-align: center;
+}
+
 /* Responsive design for mobile devices */
 @media (max-width: 600px) {
     #floatingmenu {
@@ -109,6 +118,11 @@
 
     #floatingmenu a {
         padding: 10px 5px; /* increase padding for touch targets */
+    }
+
+    /* Adjust specific styles for the "Click Here After Selecting All Items" link on mobile */
+    #floatingmenu a.last-item {
+        padding: 15px; /* adjust padding as needed for mobile */
     }
 }
 
