@@ -305,7 +305,7 @@ h2 {
 .dish img {
     width: 100%;
     max-width: 200px;
-    height: auto;
+    height: 150px;
 }
 
 .dish p {
