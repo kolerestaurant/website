@@ -46,14 +46,14 @@ body {
 
 header {
     text-align: center;
-    padding: 40px 20px 20px;
+    
     background-color: #1b2023;
     margin-bottom: 10px;
 }
 
 header .header-text {
     font-family: 'Allura', cursive;
-    font-size: 3.5em;
+    font-size: 1em;
     font-weight: bold;
     color: goldenrod;
     text-align: center;
@@ -102,29 +102,6 @@ a {
     text-decoration: none;
 }
 
-.slideshow-container {
-    position: relative;
-    max-width: 800px;
-    margin: auto;
-}
-
-.mySlides {
-    display: none;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1s;
-}
-
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
 .about p {
     font-size: 1em;
@@ -284,9 +261,9 @@ button:hover {
 .order-button {
     position: fixed;
     bottom: 20px; /* Adjust as needed */
-    left: 75%;
-    transform: translateX(-50%);
-    font-size: 1.5em;
+    left: 56%;
+    
+    font-size: 1em;
     padding: 15px 30px;
     background-color: goldenrod;
     color: black;
@@ -311,7 +288,7 @@ button:hover {
     width: auto;
     max-width: 400px; /* limit the width of the menu */
     background-color: #000; /* black background */
-    border: 1px solid #ccc;
+    
     padding: 10px;
     box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
     text-align: center; /* center the content */
@@ -417,7 +394,7 @@ button:hover {
 }
 
 .dish .quantity-controls span {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #fff;
 }
 
