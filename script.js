@@ -77,7 +77,7 @@ function updateButton(button, size, price, quantity) {
 
     quantityControls.innerHTML = `
         <button onclick="updateQuantity(this, 'decrement', '${size}', ${price})">-</button>
-        ${quantity} ${size.charAt(0).toUpperCase() + size.slice(1)} Selected
+        ${quantity} ${size.charAt(0).toUpperCase() + size.slice(1)} Added
         <button onclick="updateQuantity(this, 'increment', '${size}', ${price})">+</button>
     `;
     button.style.display = 'none';
