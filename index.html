@@ -39,30 +39,27 @@
 <style>
         body {
     font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
 /* Styling for the floating menu */
 #floatingmenu {
     position: fixed;
-    bottom: -335px; /* initially hide the menu */
+    bottom: 70px; /* Adjust as needed */
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    max-width: 400px; /* limit the width of the menu */
+    width: auto; /* width will adjust to content */
     background-color: #000; /* black background */
     border: 1px solid #ccc;
     padding: 10px;
-    transition: bottom 0.3s;
     box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
     text-align: center; /* center the content */
+    z-index: 1000; /* Ensure menu stays above other elements */
 }
 
 /* Styling for the menu label */
 #floatingmenu .label {
-    position: absolute;
-    top: -40px; /* position the label above the menu */
-    left: 50%;
-    transform: translateX(-50%);
     width: 150px;
     height: 40px;
     background-color: #DAA520; /* golden background */
@@ -71,16 +68,22 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin: 0 auto; /* center the label */
 }
 
-/* Styling for the links in the menu */
+/* Initially hide the links */
 #floatingmenu a {
-    display: block;
+    display: none;
     margin-bottom: 5px;
     text-decoration: none;
     color: #fff; /* white font */
     padding: 5px;
     transition: background-color 0.3s, color 0.3s;
+}
+
+/* Show the links when the menu is active */
+#floatingmenu.active a {
+    display: block;
 }
 
 /* Hover effect for links */
@@ -103,27 +106,6 @@
     text-align: center;
 }
 
-/* Responsive design for mobile devices */
-@media (max-width: 600px) {
-    #floatingmenu {
-        max-width: 300px; /* reduce the width of the menu */
-    }
-
-    #floatingmenu .label {
-        width: 120px; /* adjust the label width for mobile */
-        height: 30px; /* adjust the label height for mobile */
-    }
-
-    #floatingmenu a {
-        padding: 10px 5px; /* increase padding for touch targets */
-    }
-
-    /* Adjust specific styles for the "Click Here After Selecting All Items" link on mobile */
-    #floatingmenu a.last-item {
-        padding: 15px; /* adjust padding as needed for mobile */
-    }
-}
-
 
     </style>
 
@@ -137,12 +119,12 @@
 
     // Function to show the menu
     const showMenu = () => {
-        menu.style.bottom = '0';
+        menu.classList.add('active'); // Add active class to show links
     };
 
     // Function to hide the menu
     const hideMenu = () => {
-        menu.style.bottom = '-335px'; // adjust hiding position based on menu height
+        menu.classList.remove('active'); // Remove active class to hide links
     };
 
     // Add 'active' class to the selected menu item
@@ -155,7 +137,7 @@
 
     // Toggle menu visibility on label click
     label.addEventListener('click', (e) => {
-        if (menu.style.bottom === '0px') {
+        if (menu.classList.contains('active')) {
             hideMenu();
         } else {
             showMenu();

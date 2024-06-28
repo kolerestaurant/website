@@ -329,8 +329,12 @@ button:hover {
     background-color: goldenrod;
 }
 
+/* Styling for the "Place Order" button */
 .order-button {
-    margin-top: 20px;
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 1.5em;
     padding: 15px 30px;
     background-color: goldenrod;
@@ -339,7 +343,8 @@ button:hover {
     border-radius: 10px;
     cursor: pointer;
     text-transform: uppercase;
-    width: 100%;
+    width: auto; /* width will adjust to content */
+    z-index: 1000; /* Ensure button stays above other elements */
 }
 
 .order-button:hover {
@@ -402,5 +407,10 @@ button:hover {
     font-size: 1.2em;
     color: #fff;
 }
+
+.order-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
 
 
