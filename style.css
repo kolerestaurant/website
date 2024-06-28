@@ -262,7 +262,6 @@ button:hover {
     position: fixed;
     bottom: 20px; /* Adjust as needed */
     left: 56%;
-    
     font-size: 1em;
     padding: 15px 30px;
     background-color: goldenrod;
@@ -279,7 +278,6 @@ button:hover {
 }
 
 
-
 #floatingmenu {
     position: fixed;
     bottom: 20px; /* place the menu title slightly above the bottom */
@@ -287,11 +285,11 @@ button:hover {
     transform: translateX(-50%);
     width: auto;
     max-width: 400px; /* limit the width of the menu */
-    background-color: #000; /* black background */
-    
+    background-color: goldenrod; /* black background */
     padding: 10px;
     box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
     text-align: center; /* center the content */
+    border-radius: 10px;
 }
 
 /* Styling for the menu label */
