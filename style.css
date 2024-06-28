@@ -162,7 +162,6 @@ h2 {
 
 .order-on-whatsapp {
     text-align: center;
-    padding: 20px 20px 20px;
     margin-top: -20px;
 }
 
@@ -209,7 +208,7 @@ button:hover {
 .order-button {
     position: fixed;
     bottom: 20px; /* Adjust as needed */
-    left: 56%;
+    left: 60%;
     font-size: 1em;
     padding: 15px 30px;
     background-color: goldenrod;
@@ -219,6 +218,7 @@ button:hover {
     cursor: pointer;
     width: auto; /* width will adjust to content */
     z-index: 1000; /* Ensure button stays above other elements */
+    height: 50px;
 }
 
 .order-button:hover {
