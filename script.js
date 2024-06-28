@@ -1,3 +1,52 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('#floatingmenu a');
+    const menu = document.getElementById('floatingmenu');
+    const label = document.querySelector('#floatingmenu .label');
+
+    // Function to show the menu
+    const showMenu = () => {
+        menu.classList.add('active'); // Add active class to show links
+    };
+
+    // Function to hide the menu
+    const hideMenu = () => {
+        menu.classList.remove('active'); // Remove active class to hide links
+    };
+
+    // Add 'active' class to the selected menu item
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+
+    // Toggle menu visibility on label click
+    label.addEventListener('click', (e) => {
+        if (menu.classList.contains('active')) {
+            hideMenu();
+        } else {
+            showMenu();
+        }
+        e.stopPropagation();
+    });
+
+    // Hide menu when clicking outside of it
+    document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && e.target !== label) {
+            hideMenu();
+        }
+    });
+
+    // Ensure menu hides when tapping outside on mobile
+    document.addEventListener('touchstart', (e) => {
+        if (!menu.contains(e.target) && e.target !== label) {
+            hideMenu();
+        }
+    });
+});
+
+
 let selectedItems = []; // Array to store selected items
 
 function selectItem(button, size, price) {
@@ -25,9 +74,9 @@ function updateButton(button, size, price, quantity) {
     const quantityControls = parent.querySelector(`.quantity-controls.${size}`);
 
     quantityControls.innerHTML = `
-        <button onclick="updateQuantity(this, 'decrement', '${size}', ${price})">-</button>
-        ${quantity} ${size.charAt(0).toUpperCase() + size.slice(1)} Selected
-        <button onclick="updateQuantity(this, 'increment', '${size}', ${price})">+</button>
+    <button onclick="updateQuantity(this, 'decrement', '${size}', ${price})">-</button>
+    ${quantity} ${size.charAt(0).toUpperCase() + size.slice(1)} Selected
+    <button onclick="updateQuantity(this, 'increment', '${size}', ${price})">+</button>
     `;
     button.style.display = 'none';
 }

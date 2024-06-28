@@ -83,55 +83,6 @@ section {
     text-align: center;
 }
 
-.photos {
-    overflow-y: hidden;
-    max-height: 600px;
-}
-
-.photo-gallery {
-    display: flex;
-    justify-content: space-between;
-}
-
-.photo-column {
-    flex: 1;
-    margin: 0 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.photo-column img {
-    width: 100%;
-    height: auto;
-    animation: slide 5s infinite alternate;
-}
-
-@keyframes slide {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-100%);
-    }
-}
-
-.videos {
-    text-align: center;
-}
-
-.video-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.video-container video {
-    width: 520px;
-    height: auto;
-    margin: 10px;
-}
-
 footer {
     text-align: center;
     padding: 10px;
@@ -351,6 +302,70 @@ button:hover {
     background-color: #e0a800;
 }
 
+
+
+#floatingmenu {
+    position: fixed;
+    bottom: 20px; /* place the menu title slightly above the bottom */
+    left: 25%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 400px; /* limit the width of the menu */
+    background-color: #000; /* black background */
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    text-align: center; /* center the content */
+}
+
+/* Styling for the menu label */
+#floatingmenu .label {
+    width: 150px;
+    height: 40px;
+    background-color: #DAA520; /* golden background */
+    color: #000; /* black font */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 auto; /* center the label */
+}
+
+/* Initially hide the links */
+#floatingmenu a {
+    display: none;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #fff; /* white font */
+    padding: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Show the links when the menu is active */
+#floatingmenu.active a {
+    display: block;
+}
+
+/* Hover effect for links */
+#floatingmenu a:hover {
+    background-color: #DAA520; /* golden background */
+    color: #000; /* black text */
+}
+
+/* Style for the active (selected) link */
+#floatingmenu a.active {
+    background-color: #DAA520; /* golden background */
+    color: #000; /* black text */
+}
+
+/* Styling for the "Click Here After Selecting All Items" link */
+#floatingmenu a.last-item {
+    background-color: #FF0000; /* red background */
+    color: #fff; /* white text */
+    padding: 10px; /* adjust padding as needed */
+    text-align: center;
+}
+
 /* Responsive design for mobile */
 @media (max-width: 768px) {
     .dish-grid {
@@ -358,9 +373,8 @@ button:hover {
     }
 
     .order-button {
-        width: 100%;
-        padding: 20px;
-        font-size: 1.2em;
+        font-size: 1em;
+        padding: 10px 20px;
     }
 }
 
@@ -408,9 +422,24 @@ button:hover {
     color: #fff;
 }
 
-.order-button {
-        font-size: 1em;
-        padding: 10px 20px;
-    }
+#floatingmenu {
+    max-width: 300px; /* reduce the width of the menu */
+}
+
+#floatingmenu .label {
+    width: 120px; /* adjust the label width for mobile */
+    height: 30px; /* adjust the label height for mobile */
+}
+
+#floatingmenu a {
+    padding: 10px 5px; /* increase padding for touch targets */
+}
+
+/* Adjust specific styles for the "Click Here After Selecting All Items" link on mobile */
+#floatingmenu a.last-item {
+    padding: 15px; /* adjust padding as needed for mobile */
+}
+
+
 
 
