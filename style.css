@@ -142,61 +142,7 @@ h2 {
     }
 }
 
-/* Media Queries for Mobile Devices */
-@media (max-width: 768px) {
-    header {
-        padding: 30px 20px 20px;
-    }
-    .logo {
-        width: 200px;
-    }
-    .menu {
-        padding: 5px 0;
-    }
-    .menu ul li {
-        margin: 5px 0;
-    }
-    .menu ul li a {
-        padding: 5px 10px;
-    }
-    .about p {
-        font-size: 0.9em;
-    }
-    .about h2,
-    .photos h2,
-    .videos h2,
-    .contact h2 {
-        font-size: 1.5em;
-    }
-    footer {
-        padding: 5px;
-    }
-}
 
-/* Media Queries for Small Mobile Devices */
-@media (max-width: 480px) {
-    header {
-        padding: 20px 10px 10px;
-    }
-    .logo {
-        width: 150px;
-    }
-    .menu ul li a {
-        padding: 5px;
-    }
-    .about p {
-        font-size: 0.85em;
-    }
-    .about h2,
-    .photos h2,
-    .videos h2,
-    .contact h2 {
-        font-size: 1.3em;
-    }
-    footer {
-        padding: 5px;
-    }
-}
 
 .about {
     text-align: center;
@@ -234,10 +180,12 @@ h2 {
     width: 100%;
     max-width: 200px;
     height: auto;
+    border-radius: 10px;
 }
 
 .dish p {
     margin: 10px 0;
+    font-size: 12px;
 }
 
 button {
@@ -295,7 +243,7 @@ button:hover {
 /* Styling for the menu label */
 #floatingmenu .label {
     width: 150px;
-    height: 40px;
+    height: 20px;
     background-color: #DAA520; /* golden background */
     color: #000; /* black font */
     display: flex;
@@ -412,6 +360,63 @@ button:hover {
 /* Adjust specific styles for the "Click Here After Selecting All Items" link on mobile */
 #floatingmenu a.last-item {
     padding: 15px; /* adjust padding as needed for mobile */
+}
+
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    header {
+        padding: 30px 20px 20px;
+    }
+    .logo {
+        width: 200px;
+    }
+    .menu {
+        padding: 5px 0;
+    }
+    .menu ul li {
+        margin: 5px 0;
+    }
+    .menu ul li a {
+        padding: 5px 10px;
+    }
+    .about p {
+        font-size: 0.9em;
+    }
+    .about h2,
+    .photos h2,
+    .videos h2,
+    .contact h2 {
+        font-size: 1.5em;
+    }
+    footer {
+        padding: 5px;
+    }
+}
+
+/* Media Queries for Small Mobile Devices */
+@media (max-width: 480px) {
+    header {
+        padding: 20px 10px 10px;
+    }
+    .logo {
+        width: 150px;
+    }
+    .menu ul li a {
+        padding: 5px;
+    }
+    .about p {
+        font-size: 0.85em;
+    }
+    .about h2,
+    .photos h2,
+    .videos h2,
+    .contact h2 {
+        font-size: 1.3em;
+    }
+    footer {
+        padding: 5px;
+    }
 }
 
 
