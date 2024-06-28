@@ -18,7 +18,7 @@
     <section id="home">
         <header>
             <img src="Kole Logo 2.png" alt="Kole Restaurant Logo" class="logo">
-            <p class="header-text">Experience The Best of North Indian Cuisine</p>
+            <!--<p class="header-text">Experience The Best of North Indian Cuisine</p>-->
         </header>
     </section>
 
@@ -38,37 +38,38 @@
 
 <style>
         body {
-            font-family: Arial, sans-serif;
-        }
+    font-family: Arial, sans-serif;
+}
 
-        /* Styling for the floating menu */
+/* Styling for the floating menu */
 #floatingmenu {
     position: fixed;
-    top: 50%;
-    right: -170px; /* initially hide the menu */
-    width: 150px;
+    bottom: -335px; /* initially hide the menu */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 400px; /* limit the width of the menu */
     background-color: #000; /* black background */
     border: 1px solid #ccc;
     padding: 10px;
-    transition: right 0.3s;
-    transform: translateY(-50%);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: bottom 0.3s;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    text-align: center; /* center the content */
 }
 
 /* Styling for the menu label */
 #floatingmenu .label {
     position: absolute;
-    top: 0;
-    left: -60px; /* position the label outside of the hidden menu */
-    width: 60px;
-    height: 100%;
+    top: -40px; /* position the label above the menu */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 40px;
     background-color: #DAA520; /* golden background */
     color: #000; /* black font */
     display: flex;
     align-items: center;
     justify-content: center;
-    writing-mode: vertical-rl; /* rotate the text */
-    transform: rotate(180deg); /* flip the rotated text */
     cursor: pointer;
 }
 
@@ -94,7 +95,6 @@
     color: #000; /* black text */
 }
 
-
 /* Styling for the "Click Here After Selecting All Items" link */
 #floatingmenu a.last-item {
     background-color: #FF0000; /* red background */
@@ -106,14 +106,12 @@
 /* Responsive design for mobile devices */
 @media (max-width: 600px) {
     #floatingmenu {
-        right: -140px; /* hide the menu a bit less on mobile */
-        width: 120px; /* reduce the width of the menu */
+        max-width: 300px; /* reduce the width of the menu */
     }
 
     #floatingmenu .label {
-        height: 25%;
-        left: -50px; /* adjust the label position for mobile */
-        width: 50px; /* reduce the width of the label */
+        width: 120px; /* adjust the label width for mobile */
+        height: 30px; /* adjust the label height for mobile */
     }
 
     #floatingmenu a {
@@ -131,24 +129,20 @@
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+    
+    document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('#floatingmenu a');
     const menu = document.getElementById('floatingmenu');
     const label = document.querySelector('#floatingmenu .label');
 
     // Function to show the menu
     const showMenu = () => {
-        menu.style.right = '0';
+        menu.style.bottom = '0';
     };
 
     // Function to hide the menu
     const hideMenu = () => {
-        // Adjust hiding position based on screen size
-        if (window.innerWidth > 600) {
-            menu.style.right = '-170px'; // for web
-        } else {
-            menu.style.right = '-140px'; // for mobile
-        }
+        menu.style.bottom = '-335px'; // adjust hiding position based on menu height
     };
 
     // Add 'active' class to the selected menu item
@@ -161,7 +155,7 @@
 
     // Toggle menu visibility on label click
     label.addEventListener('click', (e) => {
-        if (menu.style.right === '0px') {
+        if (menu.style.bottom === '0px') {
             hideMenu();
         } else {
             showMenu();
