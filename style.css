@@ -178,7 +178,7 @@ h2 {
 .dish img {
     width: 100%;
     max-width: 200px;
-    height: auto;
+    height: 50%;
     border-radius: 10px;
 }
 
@@ -303,7 +303,7 @@ button:hover {
 .dish button {
     display: inline-block;
     width: 100%;
-    margin: 5px 0;
+    margin: 0px 0;
     text-align: center;
     padding: 10px;
     border: none;
