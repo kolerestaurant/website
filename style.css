@@ -293,7 +293,6 @@ button:hover {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    text-transform: uppercase;
     width: auto; /* width will adjust to content */
     z-index: 1000; /* Ensure button stays above other elements */
 }

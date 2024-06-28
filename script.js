@@ -50,7 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
 let selectedItems = []; // Array to store selected items
 
 function selectItem(button, size, price) {
-    const dishName = button.parentNode.dataset.name;
+    const parent = button.closest('.dish');
+    const dishName = parent.dataset.name;
     const fullName = `${dishName} (${size})`;
     const quantityControls = button.nextElementSibling;
 
@@ -64,19 +65,20 @@ function selectItem(button, size, price) {
         });
         updateButton(button, size, price, 1);
     } else {
-        selectedItems[existingItemIndex].quantity += 1;
-        updateButton(button, size, price, selectedItems[existingItemIndex].quantity);
+        // Ensure that we don't increase the quantity when selecting for the first time
+        selectedItems[existingItemIndex].quantity = 1;
+        updateButton(button, size, price, 1);
     }
 }
 
 function updateButton(button, size, price, quantity) {
-    const parent = button.parentNode;
+    const parent = button.closest('.dish');
     const quantityControls = parent.querySelector(`.quantity-controls.${size}`);
 
     quantityControls.innerHTML = `
-    <button onclick="updateQuantity(this, 'decrement', '${size}', ${price})">-</button>
-    ${quantity} ${size.charAt(0).toUpperCase() + size.slice(1)} Selected
-    <button onclick="updateQuantity(this, 'increment', '${size}', ${price})">+</button>
+        <button onclick="updateQuantity(this, 'decrement', '${size}', ${price})">-</button>
+        ${quantity} ${size.charAt(0).toUpperCase() + size.slice(1)} Selected
+        <button onclick="updateQuantity(this, 'increment', '${size}', ${price})">+</button>
     `;
     button.style.display = 'none';
 }
@@ -104,10 +106,11 @@ function updateQuantity(button, action, size, price) {
 
 function resetButton(parent, size) {
     const button = parent.querySelector(`button[onclick*="selectItem"][onclick*="${size}"]`);
+    button.style.display = 'inline-block';
     const quantityControls = parent.querySelector(`.quantity-controls.${size}`);
     quantityControls.innerHTML = '';
-    button.style.display = 'inline-block';
 }
+
 
 function addToCart(button) {
     const dish = button.parentNode.dataset;
