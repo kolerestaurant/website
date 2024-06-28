@@ -333,7 +333,7 @@ button:hover {
 .order-button {
     position: fixed;
     bottom: 20px; /* Adjust as needed */
-    left: 50%;
+    left: 75%;
     transform: translateX(-50%);
     font-size: 1.5em;
     padding: 15px 30px;

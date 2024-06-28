@@ -39,23 +39,21 @@
 <style>
         body {
     font-family: Arial, sans-serif;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
 }
 
 /* Styling for the floating menu */
 #floatingmenu {
     position: fixed;
-    bottom: 70px; /* Adjust as needed */
-    left: 50%;
+    bottom: 20px; /* place the menu title slightly above the bottom */
+    left: 25%;
     transform: translateX(-50%);
-    width: auto; /* width will adjust to content */
+    width: auto;
+    max-width: 400px; /* limit the width of the menu */
     background-color: #000; /* black background */
     border: 1px solid #ccc;
     padding: 10px;
     box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
     text-align: center; /* center the content */
-    z-index: 1000; /* Ensure menu stays above other elements */
 }
 
 /* Styling for the menu label */
@@ -104,6 +102,27 @@
     color: #fff; /* white text */
     padding: 10px; /* adjust padding as needed */
     text-align: center;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+    #floatingmenu {
+        max-width: 300px; /* reduce the width of the menu */
+    }
+
+    #floatingmenu .label {
+        width: 120px; /* adjust the label width for mobile */
+        height: 30px; /* adjust the label height for mobile */
+    }
+
+    #floatingmenu a {
+        padding: 10px 5px; /* increase padding for touch targets */
+    }
+
+    /* Adjust specific styles for the "Click Here After Selecting All Items" link on mobile */
+    #floatingmenu a.last-item {
+        padding: 15px; /* adjust padding as needed for mobile */
+    }
 }
 
 
