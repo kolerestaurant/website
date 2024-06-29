@@ -46,9 +46,8 @@ body {
 
 header {
     text-align: center;
-    
     background-color: #1b2023;
-    margin-bottom: 10px;
+    margin-bottom: -50px;
 }
 
 header .header-text {
