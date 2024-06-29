@@ -92,7 +92,7 @@ footer {
     width: 400px;
     height: auto;
     display: block;
-    margin: 10px auto;
+    margin: 25px auto;
 }
 
 a {
@@ -289,7 +289,7 @@ button:hover {
 /* Responsive design for mobile */
 @media (max-width: 768px) {
     .dish-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .order-button {
