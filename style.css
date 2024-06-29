@@ -53,7 +53,7 @@ header {
 
 header .header-text {
     font-family: 'Allura', cursive;
-    font-size: 1em;
+    font-size: 3em;
     font-weight: bold;
     color: goldenrod;
     text-align: center;
@@ -167,7 +167,7 @@ h2 {
 
 .dish-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px;
 }
 
