@@ -52,8 +52,7 @@ header {
 }
 
 header .header-text {
-    font-family: 'Allura', cursive;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bold;
     color: red;
     text-align: center;
