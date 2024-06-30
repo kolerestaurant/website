@@ -143,9 +143,9 @@ function confirmOrder() {
         total += item.price * item.quantity;
     });
     message += `Total: ₹${total.toFixed(2)}`;
-    message += `\nDiscount: ₹${((total)*0.3).toFixed(2)}`;
+    message += `\nDiscount: ₹${((total)*0.2).toFixed(2)}`;
     message += `\n------------------------------------`;
-    message += `\nNet Payment: ₹${(total - total*0.3).toFixed(2)}`;
+    message += `\nNet Payment: ₹${(total - total*0.2).toFixed(2)}`;
 
     if (confirm(message + "\n\nDo you want to confirm your order?")) {
         sendToWhatsApp(message);
