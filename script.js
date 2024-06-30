@@ -150,12 +150,10 @@ function confirmOrder() {
         let discount = total * 0.2;
         message += `\nDiscount: ₹${discount.toFixed(2)}`;
         total -= discount;
-    } else {
-        message += `\nDiscount: ₹0.00`;
     }
 
-message += `\n------------------------------------`;
-message += `\nNet Payment: ₹${total.toFixed(2)}`;
+    message += `\n------------------------------------`;
+    message += `\nNet Payment: ₹${total.toFixed(2)}`;
 
     if (confirm(message + "\n\nDo you want to confirm your order?")) {
         sendToWhatsApp(message);
