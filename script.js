@@ -47,53 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Restaurant location (latitude and longitude)
-        const restaurantLat = 28.481560;
-        const restaurantLon = 77.094990;
-
-        // Function to calculate the distance between two points using the Haversine formula
-        function calculateDistance(lat1, lon1, lat2, lon2) {
-            const R = 6371; // Radius of the Earth in km
-            const dLat = (lat2 - lat1) * Math.PI / 180;
-            const dLon = (lon2 - lon1) * Math.PI / 180;
-            const a = 
-                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
-                Math.sin(dLon / 2) * Math.sin(dLon / 2);
-            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-            const distance = R * c; // Distance in km
-            return distance;
-        }
-
-        // Disable all interactions on the page
-        function disablePage() {
-            document.body.classList.add('disabled');
-            document.getElementById('overlay').style.display = 'flex';
-        }
-
-        // Check if geolocation is supported
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((position) => {
-                const userLat = position.coords.latitude;
-                const userLon = position.coords.longitude;
-                const distance = calculateDistance(restaurantLat, restaurantLon, userLat, userLon);
-
-                if (distance > 5) {
-                    disablePage();
-                } else {
-                    // Allow the user to order
-                    alert("Welcome! You can order now.");
-                }
-            }, (error) => {
-                alert("Unable to retrieve your location. Please try again.");
-            });
-        } else {
-            alert("Geolocation is not supported by your browser.");
-        }
-
-
-
-
 let selectedItems = []; // Array to store selected items
 
 function selectItem(button, size, price) {
@@ -194,12 +147,12 @@ function confirmOrder() {
     message += `Total: ₹${total.toFixed(2)}`;
 
     if (total > 500) {
-        let discount = total * 0.2;
-        message += `\nDiscount: ₹${discount.toFixed(2)}`;
+        let discount = total * 0.15;
+        message += `\nDiscount (15%): ₹${discount.toFixed(2)}`;
         total -= discount;
     }
 
-    message += `\n---------------`;
+    message += `\n-------------------`;
     message += `\nNet Payment: ₹${total.toFixed(2)}`;
 
     if (confirm(message + "\n\nDo you want to confirm your order?")) {
