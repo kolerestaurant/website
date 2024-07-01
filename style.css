@@ -319,7 +319,7 @@ button:hover {
 .dish .quantity-controls button {
     width: 30px;
     height: 30px;
-    background-color: #000;
+    background-color: goldenrod;
     color: #fff;
     border: none;
     border-radius: 5px;
