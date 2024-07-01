@@ -5,7 +5,7 @@ body {
     margin: 0 auto;
     max-width: 1200px;
     padding: 0;
-    background-color: #1b2023;
+    background-color: black;
     color: #fff;
 }
 
@@ -46,7 +46,7 @@ body {
 
 header {
     text-align: center;
-    background-color: #1b2023;
+    
     margin-bottom: -50px;
 }
 
@@ -62,14 +62,7 @@ section {
     margin: 5px;
 }
 
-.about,
-.photos,
-.videos,
-.contact {
-    background-color: #1b2023;
-    margin: 20px auto;
-    padding: 20px;
-}
+
 
 .contact a {
     color: goldenrod;
@@ -305,7 +298,7 @@ button:hover {
     text-align: center;
     padding: 10px;
     border: none;
-    background-color: #000;
+    background-color: goldenrod;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
@@ -367,7 +360,7 @@ button:hover {
         padding: 30px 20px 20px;
     }
     .logo {
-        width: 200px;
+        width: 300px;
     }
     .menu {
         padding: 5px 0;
@@ -398,7 +391,7 @@ button:hover {
         padding: 20px 10px 10px;
     }
     .logo {
-        width: 150px;
+        width: 300px;
     }
     .menu ul li a {
         padding: 5px;
