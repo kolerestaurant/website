@@ -65,6 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return distance;
         }
 
+        // Disable all interactions on the page
+        function disablePage() {
+            document.body.classList.add('disabled');
+            document.getElementById('overlay').style.display = 'flex';
+        }
+
         // Check if geolocation is supported
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((position) => {
@@ -73,11 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const distance = calculateDistance(restaurantLat, restaurantLon, userLat, userLon);
 
                 if (distance > 5) {
-                    alert("We do not deliver outside 5 KM radius from our restaurant currently..");
+                    disablePage();
                 } else {
                     // Allow the user to order
-                    // Add your ordering logic here
-                    alert("Welcome! We can deliver you this order.");
+                    alert("Welcome! You can order now.");
                 }
             }, (error) => {
                 alert("Unable to retrieve your location. Please try again.");
