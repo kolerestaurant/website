@@ -199,7 +199,7 @@ function confirmOrder() {
         total -= discount;
     }
 
-    message += `\n------------------------------------`;
+    message += `\n---------------`;
     message += `\nNet Payment: ₹${total.toFixed(2)}`;
 
     if (confirm(message + "\n\nDo you want to confirm your order?")) {
