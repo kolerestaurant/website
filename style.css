@@ -175,7 +175,7 @@ h2 {
 
 .dish p {
     margin: 10px 0;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 button {
@@ -293,8 +293,8 @@ button:hover {
 
 .dish button {
     display: inline-block;
-    width: 100%;
-    margin: 0px 0;
+    width: 80%;
+    margin: 5px 0;
     text-align: center;
     padding: 10px;
     border: none;
