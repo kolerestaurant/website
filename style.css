@@ -83,7 +83,7 @@ footer {
     width: 400px;
     height: auto;
     display: block;
-    margin-left: 65px;
+    margin: 25px auto;
 }
 
 a {
@@ -359,6 +359,7 @@ button:hover {
     }
     .logo {
         width: 300px;
+        margin-left: 65px;
     }
     .menu {
         padding: 5px 0;
