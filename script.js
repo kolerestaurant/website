@@ -137,7 +137,7 @@ function confirmOrder() {
     }
 
     let total = 0;
-    let message = "Please note down my order.\n";
+    let message = "Please note down my order.\n\n";
 
     selectedItems.forEach(item => {
         message += `${item.name} X ${item.quantity} = ₹${item.price * item.quantity}\n`;
